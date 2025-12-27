@@ -91,6 +91,9 @@ void loop() {
   case IDLE:
     // everything off
     set_heater(0);
+    if (data.temperature < 5){
+      analogWrite(led5,100);
+    }
     break;
 
   case ON:
